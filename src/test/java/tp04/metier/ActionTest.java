@@ -17,6 +17,7 @@ public class ActionTest {
 
     @Test
     public void testSomeMethod() {
+        Action a = new ActionSimple("Coucou");
     }
 
 }
