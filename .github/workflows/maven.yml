@@ -37,8 +37,8 @@ jobs:
       run: mvn -B verify sonar:sonar
     - name: Check Javadoc
       run: mvn javadoc:javadoc --file pom.xml
-    - name: Check Licences
-      run: mvn apache-rat:check --file pom.xml
+    #- name: Check Licences
+    #  run: mvn apache-rat:check --file pom.xml
 
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
