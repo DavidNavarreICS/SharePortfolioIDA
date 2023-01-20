@@ -25,6 +25,10 @@ public abstract class Action {
         return libelle;
     }
 
+    /**
+     *
+     * @param libelle
+     */
     public Action(String libelle) {
         this.libelle = libelle;
     }

@@ -4,6 +4,7 @@
  */
 package tp04.metier;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -17,6 +18,14 @@ public class ActionTest {
 
     @Test
     public void testSomeMethod() {
+        final Action action = new Action("Toto") {
+            @Override
+            public float valeur(Jour aJ) {
+                return -1.0F;
+            }
+        };
+        final String lib = action.getLibelle();
+        Assertions.assertSame("Toto", lib);
     }
 
 }
