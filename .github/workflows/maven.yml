@@ -37,7 +37,7 @@ jobs:
       run: mvn -B verify sonar:sonar -Dsonar.scm.provider=git
     - name: Check Javadoc
       run: mvn javadoc:javadoc --file pom.xml
-    #- name: Check Licences
-    #  run: mvn apache-rat:check --file pom.xml
+    - name: Check Licences
+      run: mvn apache-rat:check --file pom.xml
 
 
