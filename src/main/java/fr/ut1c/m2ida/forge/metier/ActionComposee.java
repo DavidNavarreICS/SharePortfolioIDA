@@ -43,7 +43,7 @@ public class ActionComposee extends Action {
         valeur = 0;
         for (ActionSimple as : this.mapPanier.keySet()) {
 
-            valeur += (as.valeur(j) * this.mapPanier.get(as));
+            valeur += ((double) as.valeur(j) * (double) this.mapPanier.get(as));
         }
 
         return (float) valeur;

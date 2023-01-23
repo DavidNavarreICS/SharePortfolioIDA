@@ -83,7 +83,7 @@ public class Portefeuille {
     public float valeur(Jour j) {
         double total = 0;
         for (LignePortefeuille lp : this.mapLignes.values()) {
-            total += (lp.getQte() * lp.getAction().valeur(j));
+            total += (lp.getQte() * (double) lp.getAction().valeur(j));
         }
         return (float) total;
     }
