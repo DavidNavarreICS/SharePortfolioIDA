@@ -15,10 +15,28 @@
  */
 package fr.ut1c.m2ida.forge.metier;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 /**
  *
- * @author perussel
+ * @author David Navarre <David.Navarre@irit.fr>
  */
-public class Cours {
+public class AbstractActionTest {
+
+    public AbstractActionTest() {
+    }
+
+    @Test
+    public void testSomeMethod() {
+        final AbstractAction action = new AbstractAction("Toto") {
+            @Override
+            public float valeur(Jour aJ) {
+                return -1.0F;
+            }
+        };
+        final String lib = action.getLibelle();
+        Assertions.assertSame("Toto", lib);
+    }
 
 }

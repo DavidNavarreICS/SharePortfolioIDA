@@ -24,11 +24,11 @@ import java.util.Map;
  */
 public class Portefeuille {
 
-    Map<Action, LignePortefeuille> mapLignes;
+    Map<AbstractAction, LignePortefeuille> mapLignes;
 
     private class LignePortefeuille {
 
-        private Action action;
+        private AbstractAction action;
 
         private int qte;
 
@@ -40,11 +40,11 @@ public class Portefeuille {
             this.qte = qte;
         }
 
-        public Action getAction() {
+        public AbstractAction getAction() {
             return this.action;
         }
 
-        public LignePortefeuille(Action action, int qte) {
+        public LignePortefeuille(AbstractAction action, int qte) {
             this.action = action;
             this.qte = qte;
         }
@@ -58,7 +58,7 @@ public class Portefeuille {
         this.mapLignes = new HashMap();
     }
 
-    public void acheter(Action a, int q) {
+    public void acheter(AbstractAction a, int q) {
         if (this.mapLignes.containsKey(a) == false) {
             this.mapLignes.put(a, new LignePortefeuille(a, q));
         } else {
@@ -66,7 +66,7 @@ public class Portefeuille {
         }
     }
 
-    public void vendre(Action a, int q) {
+    public void vendre(AbstractAction a, int q) {
         if (this.mapLignes.containsKey(a) == true) {
             if (this.mapLignes.get(a).getQte() > q) {
                 this.mapLignes.get(a).setQte(this.mapLignes.get(a).getQte() - q);

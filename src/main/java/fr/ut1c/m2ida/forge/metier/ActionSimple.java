@@ -22,14 +22,14 @@ import java.util.Map;
  *
  * @author perussel
  */
-public class ActionSimple extends Action {
+public class ActionSimple extends AbstractAction {
 
     // attribut lien
     private Map<Jour, Cours> mapCours;
 
     // constructeur
     public ActionSimple(String libelle) {
-        // Action simple initialisée comme 1 action
+        // AbstractAction simple initialisée comme 1 action
         super(libelle);
         // init spécifique
         this.mapCours = new HashMap();

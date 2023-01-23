@@ -22,7 +22,7 @@ import java.util.Map;
  *
  * @author perussel
  */
-public class ActionComposee extends Action {
+public class ActionComposee extends AbstractAction {
 
     // attribut lien
     Map<ActionSimple, Float> mapPanier;

@@ -22,21 +22,20 @@ import org.junit.jupiter.api.Test;
  *
  * @author David Navarre <David.Navarre@irit.fr>
  */
-public class ActionTest {
+public class ActionSimpleTest {
 
-    public ActionTest() {
+    public ActionSimpleTest() {
     }
 
     @Test
-    public void testSomeMethod() {
-        final Action action = new Action("Toto") {
-            @Override
-            public float valeur(Jour aJ) {
-                return -1.0F;
-            }
-        };
-        final String lib = action.getLibelle();
-        Assertions.assertSame("Toto", lib);
+    public void testEnregistrementCoursReturnOK() {
+        final ActionSimple as = new ActionSimple("Toto");
+        final Jour j1 = new Jour(0, 0);
+        final float value = 1.37F;
+        as.enrgCours(j1, value);
+        final float result = as.valeur(j1);
+
+        Assertions.assertEquals(value, result);
     }
 
 }
