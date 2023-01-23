@@ -13,12 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tp04.metier;
+package fr.ut1c.m2ida.forge.metier;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author perussel
+ * @author David Navarre <David.Navarre@irit.fr>
  */
-public class Cours {
+public class ActionTest {
+
+    public ActionTest() {
+    }
+
+    @Test
+    public void testSomeMethod() {
+        final Action action = new Action("Toto") {
+            @Override
+            public float valeur(Jour aJ) {
+                return -1.0F;
+            }
+        };
+        final String lib = action.getLibelle();
+        Assertions.assertSame("Toto", lib);
+    }
 
 }
