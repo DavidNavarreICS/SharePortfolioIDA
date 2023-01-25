@@ -18,9 +18,8 @@ package fr.ut1c.m2ida.forge.metier;
 import java.util.Objects;
 
 /**
- * XXX
  *
- * @author perussel
+ * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
 public abstract class AbstractAction {
 
